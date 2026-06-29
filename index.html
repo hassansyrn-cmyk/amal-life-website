@@ -8,10 +8,10 @@
 
   <meta name="description" content="آمال للاستشارات - استشارات أونلاين لتطوير نمط الحياة، تنظيم الأهداف، بناء العادات، وتحسين جودة الحياة اليومية." />
 
-  https://images.unsplash.com
-  https://fonts.googleapis.com
-  https://fonts.gstatic.com
-  https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800;900&display=swap
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" />
 
   <style>
     :root {
@@ -1338,7 +1338,7 @@
 
   <header>
     <div class="container nav">
-      #
+      <a class="brand" href="#">
         <div class="brand-icon">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21s-7-4.35-7-10.2C5 7.58 7.32 5 10.22 5c1.48 0 2.67.68 3.48 1.75C14.5 5.68 15.7 5 17.18 5 20.08 5 22.4 7.58 22.4 10.8 22.4 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -1351,12 +1351,12 @@
       </a>
 
       <nav class="nav-links">
-        #about</a>
-        #services</a>
-        #steps</a>
-        #packages</a>
-        #faq</a>
-        #contact</a>
+        <a href="#about" data-i18n="navAbout"></a>
+        <a href="#services" data-i18n="navServices"></a>
+        <a href="#steps" data-i18n="navSteps"></a>
+        <a href="#packages" data-i18n="navPackages"></a>
+        <a href="#faq" data-i18n="navFaq"></a>
+        <a href="#contact" data-i18n="navContact"></a>
       </nav>
 
       <div class="nav-actions">
@@ -1366,7 +1366,9 @@
           Instagram
         </a>
 
-        https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal</a>
+        <a class="btn btn-primary" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal" target="_blank" rel="noopener">
+          <span data-i18n="cta"></span>
+        </a>
       </div>
     </div>
   </header>
@@ -1389,16 +1391,23 @@
           <p class="lead reveal delay-3" data-i18n="heroText"></p>
 
           <div class="hero-actions reveal delay-3">
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal
+            <a class="btn btn-primary" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal" target="_blank" rel="noopener">
               <span data-i18n="cta"></span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
 
-            #services</a>
+            <a class="btn btn-outline" href="#services">
+              <span data-i18n="learn"></span>
+            </a>
 
-            https://wa.me/971555502867</a>
+            <a class="btn btn-soft" href="https://wa.me/971555502867" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 11.8A8.45 8.45 0 0 1 8.1 19.25L4 20.5l1.34-3.96A8.45 8.45 0 1 1 20.5 11.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="whatsapp"></span>
+            </a>
           </div>
 
           <div class="trust reveal delay-3">
@@ -1421,11 +1430,11 @@
 
         <div class="visual reveal delay-2">
           <div class="visual-main">
-            https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1100&q=80
+            <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1100&q=80" alt="Al-Amal Life Consulting" />
           </div>
 
           <div class="visual-small">
-            https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Al-Amal Life Consulting" />
           </div>
 
           <div class="floating">
@@ -1495,7 +1504,7 @@
     <section id="about">
       <div class="container about">
         <div class="about-img">
-          https://images.unsplash.com/photo-1484627147104-f5197bcd6651?auto=format&fit=crop&w=1000&q=80
+          <img src="https://images.unsplash.com/photo-1484627147104-f5197bcd6651?auto=format&fit=crop&w=1000&q=80" alt="آمال - عن الخدمة" />
         </div>
 
         <div class="about-text">
@@ -1528,7 +1537,9 @@
           </div>
 
           <div class="hero-actions">
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Al-Amal%20consultations</a>
+            <a class="btn btn-primary" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Al-Amal%20consultations" target="_blank" rel="noopener">
+              <span data-i18n="ask"></span>
+            </a>
           </div>
 
           <div class="legal" data-i18n="legal"></div>
@@ -1620,21 +1631,21 @@
     <section id="gallery">
       <div class="container image-strip">
         <div class="image-card">
-          https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1100&q=80
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1100&q=80" alt="آمال" />
         </div>
 
         <div class="image-stack">
           <div class="image-card">
-            https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="آمال" />
           </div>
 
           <div class="image-card">
-            https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80
+            <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80" alt="آمال" />
           </div>
         </div>
 
         <div class="image-card">
-          https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="آمال" />
         </div>
       </div>
     </section>
@@ -1675,7 +1686,9 @@
               </li>
             </ul>
 
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20introductory%20consultation</a>
+            <a class="btn btn-outline" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20introductory%20consultation" target="_blank" rel="noopener">
+              <span data-i18n="ask"></span>
+            </a>
           </article>
 
           <article class="package highlight">
@@ -1698,7 +1711,9 @@
               </li>
             </ul>
 
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20development%20consultation%20with%20Al-Amal</a>
+            <a class="btn btn-primary" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20development%20consultation%20with%20Al-Amal" target="_blank" rel="noopener">
+              <span data-i18n="cta"></span>
+            </a>
           </article>
 
           <article class="package">
@@ -1721,7 +1736,9 @@
               </li>
             </ul>
 
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20monthly%20follow-up</a>
+            <a class="btn btn-outline" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20monthly%20follow-up" target="_blank" rel="noopener">
+              <span data-i18n="ask"></span>
+            </a>
           </article>
         </div>
       </div>
@@ -1730,7 +1747,7 @@
     <section id="faq">
       <div class="container faq">
         <div class="faq-img">
-          https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80" alt="آمال - الأسئلة الشائعة" />
         </div>
 
         <div>
@@ -1782,7 +1799,9 @@
           <p data-i18n="contactText"></p>
 
           <div class="hero-actions">
-            https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal</a>
+            <a class="btn btn-primary" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Al-Amal" target="_blank" rel="noopener">
+              <span data-i18n="cta"></span>
+            </a>
 
             <a class="btn btn-soft" href="https://www.instagram.com/amallife.consulting?igsh=MWtkcTkzdjB6Nm02Yg==" target="_blank" rel="noopener">
               Instagram
@@ -1793,7 +1812,7 @@
         </div>
 
         <div class="contact-img">
-          https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1000&q=80
+          <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1000&q=80" alt="آمال - تواصل معنا" />
         </div>
       </div>
     </section>
@@ -1809,17 +1828,17 @@
       <div>
         <h3 data-i18n="footerLinks"></h3>
         <div class="footer-links">
-          #about</a>
-          #services</a>
-          #steps</a>
-          #faq</a>
+          <a href="#about" data-i18n="navAbout"></a>
+          <a href="#services" data-i18n="navServices"></a>
+          <a href="#steps" data-i18n="navSteps"></a>
+          <a href="#faq" data-i18n="navFaq"></a>
         </div>
       </div>
 
       <div>
         <h3 data-i18n="footerContact"></h3>
         <div class="footer-links">
-          https://wa.me/971555502867WhatsApp: +971 55 550 2867</a>
+          <a href="https://wa.me/971555502867" target="_blank" rel="noopener">WhatsApp: +971 55 550 2867</a>
           <a href="https://www.instagram.com/amallife.consulting?igsh=MWtkcTkzdjB6Nm02Yg==" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
@@ -1831,7 +1850,7 @@
     </div>
   </footer>
 
-  https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation
+  <a class="floating-wa" href="https://wa.me/971555502867?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M20.5 11.8A8.45 8.45 0 0 1 8.1 19.25L4 20.5l1.34-3.96A8.45 8.45 0 1 1 20.5 11.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
       <path d="M8.55 8.2c.18-.44.38-.45.62-.45h.45c.14 0 .36.05.55.42.2.38.68 1.67.74 1.8.06.12.1.27.02.43-.08.17-.13.27-.25.41-.13.15-.27.33-.38.44-.13.13-.26.27-.11.53.14.27.63 1.04 1.36 1.68.94.84 1.73 1.1 2 .23.27-.87.35-.1.55-.06.19.04 1.21.57 1.42.67.21.1.35.15.4.24.05.1.05.55-.13 1.08-.18.53-1.05 1.02-1.47 1.06-.38.04-.86.06-1.39-.09-.32-.1-.74-.24-1.27-.47-2.24-.96-3.7-3.2-3.81-3.35-.11-.15-.91-1.21-.91-2.31 0-1.1.58-1.64.79-1.86.2-.22.45-.27.6-.27" fill="currentColor"/>
