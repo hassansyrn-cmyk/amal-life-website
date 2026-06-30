@@ -1919,6 +1919,52 @@
       }
     }
 
+
+    /* Mobile hero card correct dimensions only */
+    @media (max-width: 680px) {
+      .visual {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "small"
+          "card";
+        gap: 16px;
+        min-height: auto;
+      }
+
+      .visual-main,
+      body.en .visual-main {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 34px;
+        transform: none;
+      }
+
+      .visual-main video,
+      .visual-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .visual-small {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+        border: 6px solid rgba(255,255,255,0.72);
+        border-radius: 28px;
+      }
+
+      .visual-small img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
   </style>
 </head>
 
