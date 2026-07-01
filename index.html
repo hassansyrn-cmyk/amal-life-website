@@ -649,7 +649,8 @@
     .image-card img,
     .image-card video,
     .faq-img img,
-    .contact-img img {
+    .contact-img img,
+    .contact-img video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -2336,7 +2337,11 @@
     <section id="gallery">
       <div class="container image-strip reveal">
         <div class="image-card">
-          <img src="Images/amal-consultation.png" alt="جلسة استشارة">
+          <video autoplay muted loop playsinline poster="Images/amal-consultation.png" oncontextmenu="return false;" disablepictureinpicture onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <source src="Images/amal-consultation.webm" type="video/webm">
+            <source src="Images/amal-consultation.mp4" type="video/mp4">
+          </video>
+          <img src="Images/amal-consultation.png" alt="جلسة استشارة" style="display:none;">
         </div>
 
         <div class="image-stack">
@@ -2526,7 +2531,11 @@
         </div>
 
         <div class="contact-img">
-          <img src="Images/amal-consultation.png" alt="احجز استشارتك">
+          <video autoplay muted loop playsinline poster="Images/amal-consultation.png" oncontextmenu="return false;" disablepictureinpicture onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <source src="Images/amal-consultation.webm" type="video/webm">
+            <source src="Images/amal-consultation.mp4" type="video/mp4">
+          </video>
+          <img src="Images/amal-consultation.png" alt="احجز استشارتك" style="display:none;">
         </div>
       </div>
     </section>
