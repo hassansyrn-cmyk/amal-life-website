@@ -491,6 +491,23 @@
       }
     }
 
+    .amal-tagline {
+      font-family: "Amiri", serif;
+      color: var(--gold-dark);
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-top: -8px;
+      margin-bottom: 22px;
+      opacity: 0.92;
+    }
+
+    body.en .amal-tagline {
+      font-family: "Cairo", sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
     h1 {
       font-family: "Amiri", serif;
       font-size: clamp(38px, 5vw, 64px);
@@ -630,6 +647,7 @@
     .visual-small img,
     .about-img img,
     .image-card img,
+    .image-card video,
     .faq-img img,
     .contact-img img {
       width: 100%;
@@ -1023,10 +1041,26 @@
       flex-direction: column;
       justify-content: flex-end;
       color: white;
-      background:
-        linear-gradient(rgba(46, 41, 36, 0.25), rgba(46, 41, 36, 0.25)),
-        url("Images/amal-calm.png") center/cover;
+      background: var(--cream);
       box-shadow: var(--shadow);
+    }
+
+    .experience-card.image-bg .card-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .experience-card.image-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(46, 41, 36, 0.25);
+      z-index: 1;
+      pointer-events: none;
     }
 
     .experience-card.image-bg::after {
@@ -1034,12 +1068,13 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(0deg, rgba(46,41,36,0.35), transparent 70%);
+      z-index: 1;
       pointer-events: none;
     }
 
     .experience-card.image-bg > * {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     .experience-card h2 {
@@ -1136,14 +1171,16 @@
       box-shadow: var(--shadow);
     }
 
-    .image-card img {
+    .image-card img,
+    .image-card video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: 0.6s ease;
     }
 
-    .image-card:hover img {
+    .image-card:hover img,
+    .image-card:hover video {
       transform: scale(1.06);
     }
 
@@ -2044,9 +2081,9 @@
 
           <div class="amal-word reveal delay-1" data-i18n="heroWord"></div>
 
-          <h1 class="reveal delay-2" data-i18n-html="heroTitle"></h1>
+          <div class="amal-tagline reveal delay-1" data-i18n="heroTagline"></div>
 
-          <div class="subtitle reveal delay-2" data-i18n="subtitle"></div>
+          <h1 class="reveal delay-2" data-i18n-html="heroTitle"></h1>
 
           <p class="lead reveal delay-3" data-i18n="heroText"></p>
 
@@ -2241,6 +2278,10 @@
     <section id="experience">
       <div class="container experience-grid">
         <div class="experience-card image-bg reveal">
+          <video class="card-bg-video" autoplay muted loop playsinline poster="Images/amal-calm.png" oncontextmenu="return false;" disablepictureinpicture onerror="this.style.display='none';">
+            <source src="Images/amal-calm.webm" type="video/webm">
+            <source src="Images/amal-calm.mp4" type="video/mp4">
+          </video>
           <div class="small-label" data-i18n="experienceKicker"></div>
           <h2 data-i18n="experienceTitle"></h2>
           <p data-i18n="experienceText"></p>
@@ -2309,7 +2350,11 @@
         </div>
 
         <div class="image-card">
-          <img src="Images/amal-calm.png" alt="مساحة هادئة">
+          <video autoplay muted loop playsinline poster="Images/amal-calm.png" oncontextmenu="return false;" disablepictureinpicture onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <source src="Images/amal-calm.webm" type="video/webm">
+            <source src="Images/amal-calm.mp4" type="video/mp4">
+          </video>
+          <img src="Images/amal-calm.png" alt="مساحة هادئة" style="display:none;">
         </div>
       </div>
     </section>
@@ -2550,6 +2595,7 @@
 
         badge: "استشارات تطوير نمط الحياة أونلاين",
         heroWord: "الآمال",
+        heroTagline: "للاستشارات الحياتية",
         heroTitle: "مساحة هادئة تساعدك على <span class='accent'>ترتيب حياتك</span> بخطوات أوضح",
         subtitle: "الآمال للاستشارات الحياتية",
         heroText: "جلسات فردية أونلاين تساعدك على تنظيم أهدافك، تحسين روتينك اليومي، بناء عادات أفضل، والتعامل مع التغييرات الحياتية بطريقة عملية ومريحة.",
@@ -2683,6 +2729,7 @@
 
         badge: "Online Lifestyle Development Consultations",
         heroWord: "Al-Amal",
+        heroTagline: "Life Consulting",
         heroTitle: "A calm space to <span class='accent'>reorganize your life</span> with clearer steps",
         subtitle: "Al-Amal Life Consulting",
         heroText: "Personal online sessions designed to help you organize your goals, improve your daily routine, build better habits, and navigate life changes in a practical and comfortable way.",
